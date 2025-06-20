@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       <div className={`absolute inset-0 bg-black opacity-50 pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : ''}`}></div>
       <div className="container mx-auto px-4 text-center">
         <div className={`max-w-2xl mx-auto relative z-10 transition-opacity duration-500 ${isScrolled ? 'opacity-0' : ''}`}>
-          <h1 className="text-4xl text-ocean- md:text-5xl font-bold font-decorative mb-6 leading-tight">Corazón en Calma</h1>
+          {/*<h1 className="text-4xl text-ocean- hidden md:block md:text-5xl font-bold font-decorative mb-6 leading-tight">Corazón en Calma</h1>*/}
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
           Mindfulness o atención plena es la capacidad de estar plenamente presente en el aquí y ahora, con una actitud abierta y amable. Es una práctica basada en la meditación, pero también una forma de vivir, más conscientes y conectados.
           </p>

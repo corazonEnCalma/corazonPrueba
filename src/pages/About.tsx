@@ -7,11 +7,11 @@ const About: React.FC = () => {
   const [expandedChus, setExpandedChus] = useState(false);
 
   return (
-    <div className="bg-sky pt-24 pb-16 px-4">
+    <div className="bg-sky pt-32 pb-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-8 text-center">
-          <span className="text-ocean-dark">Sobre </span>
-          <span className="text-corazon-shadow">Nosotras</span>
+          <span className="font-decorative text-ocean-dark">Sobre </span>
+          <span className="font-decorative text-corazon-shadow">Nosotras</span>
         </h1>
         <div className="text-center mb-12">
           <p className="text-xl text-ocean-dark">

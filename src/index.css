@@ -18,3 +18,24 @@ body {
     @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-md font-medium transition-all duration-300;
   }
 }
+
+/* Scrollbar personalizado para armonizar con la paleta */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #bcd6e4 #f7f3ea; /* thumb (ocean-light), track (sand-light) */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f7f3ea; /* sand-light */
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #bcd6e4; /* ocean-light */
+  border-radius: 8px;
+  border: 2px solid #f7f3ea;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7bb3d9; /* ocean-darken al pasar el mouse */
+}

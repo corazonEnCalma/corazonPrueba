@@ -1,69 +1,45 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 import logoImage from '../assets/logo_cc.png';
-
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-sand-light py-12">
+    <footer className="bg-sand-light py-3">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center md:h-16 gap-2 md:gap-0 text-center md:text-left">
+          {/* Logo y título */}
+          <div className="flex items-center justify-center md:justify-start mb-1 md:mb-0">
             <img 
-            src={logoImage} 
-            alt="Corazón en Calma" 
-            className={`h-8 w-auto -mr-6 'lg:brightness-0 lg:invert'`}
-          />              
-          <span className="text-xl font-semibold text-ocean-dark ml-4">Corazón en Calma</span>
+              src={logoImage} 
+              alt="Corazón en Calma" 
+              className="h-8 w-auto -mr-3"
+            />
+            <span className="text-lg md:text-xl font-decorative font-semibold text-ocean-dark ml-2">Corazón en Calma</span>
+          </div>
+
+          {/* Contacto */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4 text-xs md:text-[0.95rem] text-ocean-medium mb-1 md:mb-0">
+            <div className="flex items-center">
+              <Mail size={15} className="text-wave-middle mr-1" />
+              <a href="mailto:contacto@Corazón en Calma.es" className="hover:text-corazon transition-colors whitespace-nowrap">contacto@corazon.es</a>
             </div>
-            <p className="text-sm text-ocean-medium mb-4">
-              Tu espacio para el bienestar mental
-            </p>
+            <div className="flex items-center whitespace-nowrap">
+              <MapPin size={15} className="text-wave-middle mr-1" />
+              <span>Calle Principal 123, Madrid</span>
+            </div>
+            <div className="flex items-center whitespace-nowrap">
+              <Phone size={15} className="text-wave-middle mr-1" />
+              <a href="tel:+34123456789" className="hover:text-corazon transition-colors">+34 123 456 789</a>
+            </div>
           </div>
-          
-          <div>
-            <h4 className="font-semibold text-ocean-dark mb-4">Servicios</h4>
-            <ul className="space-y-2">
-              <li><Link to="/programas" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Terapia Individual</Link></li>
-              <li><Link to="/programas" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Corazón en Calma</Link></li>
-              <li><Link to="/programas" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Talleres Grupales</Link></li>
-            </ul>
+
+          {/* Redes sociales */}
+          <div className="flex justify-center md:justify-end space-x-5 mt-3 md:mt-0">
+            <FaWhatsapp className="text-ocean-dark w-6 h-6 md:w-5 md:h-5" />
+            <FaInstagram className="text-ocean-dark w-6 h-6 md:w-5 md:h-5" />
+            <FaFacebook className="text-ocean-dark w-6 h-6 md:w-5 md:h-5" />
           </div>
-          
-          <div>
-            <h4 className="font-semibold text-ocean-dark mb-4">Enlaces</h4>
-            <ul className="space-y-2">
-              <li><Link to="/nosotras" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Sobre nosotras</Link></li>
-              <li><Link to="/programas" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Programas</Link></li>
-              <li><Link to="/contacto" className="text-sm text-ocean-medium hover:text-corazon transition-colors">Contacto</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-ocean-dark mb-4">Contacto</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Mail size={16} className="text-wave-middle mt-1 mr-2 flex-shrink-0" />
-                <a href="mailto:contacto@Corazón en Calma.es" className="text-sm text-ocean-medium hover:text-corazon transition-colors">contacto@Corazón en Calma.es</a>
-              </li>
-              <li className="flex items-start">
-                <MapPin size={16} className="text-wave-middle mt-1 mr-2 flex-shrink-0" />
-                <span className="text-sm text-ocean-medium">Calle Principal 123, Madrid, España</span>
-              </li>
-              <li className="flex items-start">
-                <Phone size={16} className="text-wave-middle mt-1 mr-2 flex-shrink-0" />
-                <a href="tel:+34123456789" className="text-sm text-ocean-medium hover:text-corazon transition-colors">+34 123 456 789</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-ocean-light mt-10 pt-6 text-center">
-          <p className="text-sm text-neutral-outline">
-            © {new Date().getFullYear()} Corazón en Calma. Todos los derechos reservados.
-          </p>
         </div>
       </div>
     </footer>
