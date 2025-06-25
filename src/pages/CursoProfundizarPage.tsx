@@ -1,6 +1,9 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { BookOpen, Wind, Leaf, Home, User, Cloud, Heart, Star, Palette, Target } from 'lucide-react';
+import ImageCarousel from '../components/ImageCarousel';
+import img1 from '../assets/talleres-presenciales/curso-profundizar/a03bb98a-b865-45fe-9f5e-1ccf040b8231.jpg';
+import img2 from '../assets/talleres-presenciales/curso-profundizar/566203f6-3736-486f-85ba-80b5f63a4a0f.jpg';
 
 const sesiones = [
   {
@@ -70,6 +73,11 @@ const abordaremos = [
   'Este curso no busca "hacer más", sino "ser más": más presentes, más conscientes, más compasivos.'
 ];
 
+const imagenesCarrusel = [
+  img1,
+  img2,
+];
+
 const CursoProfundizarPage: React.FC = () => {
   // Dividir las sesiones en dos columnas
   const mitad = Math.ceil(sesiones.length / 2);
@@ -81,6 +89,8 @@ const CursoProfundizarPage: React.FC = () => {
       <div className="container mx-auto max-w-7xl px-2 md:px-6">
         {/* Título */}
         <h1 className="text-4xl font-bold text-center mb-10 text-ocean-dark font-decorative">Curso para Profundizar en <span className="text-corazon-shadow">Mindfulness</span></h1>
+        {/* Carrusel de imágenes */}
+        <ImageCarousel images={imagenesCarrusel} altPrefix="Curso Profundizar" />
         {/* Descripción */}
         <section className="mb-10 bg-sand-light rounded-lg shadow-md p-6 xl:p-10 text-lg leading-relaxed text-ocean-dark">
           <p className="mb-4">Este curso está diseñado para quienes ya han iniciado su camino en el mindfulness y desean profundizar en la práctica, el conocimiento y la integración de la atención plena en todos los aspectos de su vida.</p>

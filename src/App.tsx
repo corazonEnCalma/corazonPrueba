@@ -10,6 +10,10 @@ import TalleresMindfulnessPage from './pages/TalleresMindfulnessPage';
 import CursoIniciacionPage from './pages/CursoIniciacionPage';
 import CursoProfundizarPage from './pages/CursoProfundizarPage';
 import ProgramaLaboralPage from './pages/ProgramaLaboralPage';
+import FormacionOnlinePage from './pages/FormacionOnlinePage';
+import MindfulnessSaludPage from './pages/MindfulnessSaludPage';
+import MindfulnessInfanciaPage from './pages/MindfulnessInfanciaPage';
+import MindfulnessLaboralOnlinePage from './pages/MindfulnessLaboralOnlinePage';
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
             <Route path="/talleres-presenciales/iniciacion" element={<CursoIniciacionPage />} />
             <Route path="/talleres-presenciales/profundizar" element={<CursoProfundizarPage />} />
             <Route path="/talleres-presenciales/ambito-laboral" element={<ProgramaLaboralPage />} />
+            <Route path="/formacion-online" element={<FormacionOnlinePage />} />
+            <Route path="/formacion-online/salud-calidad-vida" element={<MindfulnessSaludPage />} />
+            <Route path="/formacion-online/infancia" element={<MindfulnessInfanciaPage />} />
+            <Route path="/formacion-online/ambito-laboral" element={<MindfulnessLaboralOnlinePage />} />
           </Routes>
         </main>
         <Footer />

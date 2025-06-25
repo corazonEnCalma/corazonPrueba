@@ -17,8 +17,13 @@ const Hero: React.FC = () => {
 
   return (
     <section id="nosotras" className="bg-hero-pattern bg-cover bg-center min-h-screen flex items-center justify-center text-white relative">
-      {/* Darker overlay when not scrolled */}
-      <div className={`absolute inset-0 bg-black opacity-50 pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : ''}`}></div>
+      {/* Overlay de gradiente negro controlado por scroll */}
+      <div
+        className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'} backdrop-blur-sm`}
+        style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.7) 100%)'
+        }}
+      ></div>
       <div className="container mx-auto px-4 text-center">
         <div className={`max-w-2xl mx-auto relative z-10 transition-opacity duration-500 ${isScrolled ? 'opacity-0' : ''}`}>
           {/*<h1 className="text-4xl text-ocean- hidden md:block md:text-5xl font-bold font-decorative mb-6 leading-tight">Corazón en Calma</h1>*/}
@@ -54,8 +59,6 @@ const Hero: React.FC = () => {
           </svg>
         </div>
       </div>
-      {/* Radial light effect overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 pointer-events-none"></div>
     </section>
   );
 };

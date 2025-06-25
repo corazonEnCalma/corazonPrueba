@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           to="/contacto" 
           className="hidden lg:block bg-corazon hover:bg-corazon-shadow text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
         >
-          Reserva tu cita
+          Solicita Información
         </Link>
       </div>
       
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                 to="/contacto" 
                 className="block bg-corazon hover:bg-corazon-shadow text-white px-4 py-2 rounded-md text-sm font-medium text-center mt-4 transition-colors duration-300"
               >
-                Reserva tu cita
+                Solicita Información
               </Link>
             </li>
           </ul>

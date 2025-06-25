@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import { Heart, Brain, Users } from 'lucide-react';
+import { BookOpen, Brain, Laptop } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   return (
@@ -9,12 +10,14 @@ const Services: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-ocean-dark">Nuestros Servicios</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ServiceCard 
-            icon={Heart}
-            title="Terapia Individual"
-            description="Sesiones personalizadas para abordar las necesidades específicas en un ambiente seguro y de confianza."
-            iconColor="text-wave-middle"
-          />
+          <Link to="/talleres-presenciales">
+            <ServiceCard 
+              icon={BookOpen}
+              title="Talleres Presenciales"
+              description="Sesiones presenciales para abordar las necesidades específicas en un ambiente seguro y de confianza."
+              iconColor="text-wave-middle"
+            />
+          </Link>
           
           <ServiceCard 
             icon={Brain}
@@ -23,12 +26,14 @@ const Services: React.FC = () => {
             iconColor="text-ocean-dark"
           />
           
-          <ServiceCard 
-            icon={Users}
-            title="Talleres Grupales"
-            description="Participa en sesiones grupales donde compartirás experiencias y aprenderás en comunidad."
-            iconColor="text-wave-front"
-          />
+          <Link to="/formacion-online">
+            <ServiceCard 
+              icon={Laptop}
+              title="Formación Online"
+              description="Participa en talleres online donde compartirás experiencias y aprenderás en comunidad."
+              iconColor="text-wave-front"
+            />
+          </Link>
         </div>
       </div>
     </section>

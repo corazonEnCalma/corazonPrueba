@@ -2,15 +2,27 @@ import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { Heart, Trees, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ImageCarousel from '../components/ImageCarousel';
+
+
+import img1 from '../assets/talleres-presenciales/talleres-mindfulness/img1.jpg'
+import img2 from '../assets/talleres-presenciales/talleres-mindfulness/img2.jpg'
+import img3 from '../assets/talleres-presenciales/talleres-mindfulness/img3.jpg'
+
+
+const images = [ img3, img1, img2];
 
 const TalleresMindfulnessPage: React.FC = () => {
   return (
     <div className="px-4 pt-32 pb-16 bg-sky min-h-screen">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8 text-ocean-dark font-decorative">Talleres de Mindfulness</h1>
+        {/* Carrusel de imágenes */}
+        <h1 className="text-4xl font-bold text-center mb-10 text-ocean-dark font-decorative">Talleres de<span className="text-corazon-shadow"> Mindfulness</span></h1>
+        <ImageCarousel images={images} altPrefix="Taller presencial" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card: Respiración consciente */}
-          <Link to="/contacto" className="block">
+          <Link to="/contacto" className="block group" aria-label="Ir al formulario de contacto">
             <ServiceCard
               icon={Heart}
               title="Respiración consciente"
@@ -19,7 +31,7 @@ const TalleresMindfulnessPage: React.FC = () => {
           </Link>
 
           {/* Card: Mindfulness en la Naturaleza */}
-          <Link to="/contacto" className="block">
+          <Link to="/contacto" className="block group" aria-label="Ir al formulario de contacto">
             <ServiceCard
               icon={Trees}
               title="Mindfulness en la Naturaleza"
@@ -28,7 +40,7 @@ const TalleresMindfulnessPage: React.FC = () => {
           </Link>
 
           {/* Card: Controlar la ansiedad */}
-          <Link to="/contacto" className="block">
+          <Link to="/contacto" className="block group" aria-label="Ir al formulario de contacto">
             <ServiceCard
               icon={ShieldCheck}
               title="Controlar la ansiedad"

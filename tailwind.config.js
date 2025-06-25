@@ -33,7 +33,7 @@ export default {
         decorative: ['Delius', 'cursive'],
       },
       backgroundImage: {
-        'hero-pattern': "linear-gradient(rgba(255, 255, 255, 0.84), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80')",
+        'hero-pattern': "url('./src/assets/background.jpg')",
       }
     },
   },
