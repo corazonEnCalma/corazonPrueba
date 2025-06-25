@@ -32,9 +32,6 @@ export default {
         sans: ['Inter', 'sans-serif'],
         decorative: ['Delius', 'cursive'],
       },
-      backgroundImage: {
-        'hero-pattern': "url('./src/assets/background2.jpg')",
-      }
     },
   },
   plugins: [],

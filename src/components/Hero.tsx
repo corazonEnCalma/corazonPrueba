@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import backgroundImage from '../assets/background2.jpg';
 
 const Hero: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,15 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="nosotras" className="bg-hero-pattern bg-cover bg-center min-h-screen flex items-center justify-center text-white relative">
+    <section
+      id="nosotras"
+      className="min-h-screen flex items-center justify-center text-white relative"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       {/* Overlay de gradiente negro controlado por scroll */}
       <div
         className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'} backdrop-blur-sm`}
