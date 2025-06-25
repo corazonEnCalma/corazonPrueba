@@ -33,7 +33,7 @@ export default {
         decorative: ['Delius', 'cursive'],
       },
       backgroundImage: {
-        'hero-pattern': "url('./src/assets/background.jpg')",
+        'hero-pattern': "url('./src/assets/background2.jpg')",
       }
     },
   },
